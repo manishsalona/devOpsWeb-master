@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven 'local_maven'
+        MAVEN 'local_maven'
     }
     parameters {
          string(name: 'localhost', defaultValue: '127.0.0.1:8082', description: 'Local Server')
