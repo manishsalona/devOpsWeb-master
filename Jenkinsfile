@@ -20,7 +20,7 @@ pipeline {
             parallel{
                 stage ("Deploy to Staging"){
                     steps {
-                        deploy adapters: [tomcat9(credentialsId: 'd8f620d5-7173-4ca2-af8e-394ed222b62a', path: '', url: 'http://127.0.0.1:8082/')], contextPath: 'devOpsWeb-master', war: '**/*.war'
+                        deploy adapters: [tomcat9(credentialsId: 'd8f620d5-7173-4ca2-af8e-394ed222b62a', path: '', url: 'http://127.0.0.1:8082/')], contextPath: 'devOpsWeb', war: '**/*.war'
                     }
                 }
             }
